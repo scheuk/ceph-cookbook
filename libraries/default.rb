@@ -81,7 +81,7 @@ def ip_address_in_network?(ip, params, net)
 end
 
 def ip4_address_in_network?(ip, params, net)
-  net.contains?(ip) && params.key?('broadcast') && params['prefixlen'].to_i =! 32
+  net.contains?(ip) && params.key?('broadcast') && params['prefixlen'].to_i != 32
 end
 
 def ip6_address_in_network?(ip, params, net)
